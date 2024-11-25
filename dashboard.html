@@ -1,0 +1,6 @@
+@app.route('/admin')
+def admin():
+    if 'username' not in session or session['role'] != 'Admin':
+        return "Access denied. You do not have permission to view this page."
+    
+    return "Welcome to the Admin page!"
